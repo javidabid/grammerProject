@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tense"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'tense.simplePastTense' | translate }} </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openLanguagePopover($event)">
+        <ion-icon name="more" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-card color="dark">
+      <ion-card-header>
+        <ion-card-title>
+          {{'tense.simplePastTense' | translate}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{'tense.simplePastTenseDefination' | translate}}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header>
+        <ion-card-title>
+          Example
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{'tense.simplePastTenseExample' | translate}}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="dark">
+      <ion-card-header>
+        <ion-card-title>
+          Structures
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{'tense.simplePastTensePositiveStracture' | translate}}
+        <br>
+        {{'tense.simplePastTenseInterogativeStracture' | translate}}
+        <br>
+        {{'tense.simplePastTenseNegativeStracture' | translate}}
+        <br>
+        {{'tense.simplePastTenseNegativeInterogativeStracture' | translate}}
+      </ion-card-content>
+    </ion-card>
+</ion-content>

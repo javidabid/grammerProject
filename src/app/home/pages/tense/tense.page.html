@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'tense.title' | translate}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openLanguagePopover($event)">
+        <ion-icon name="more" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h2>{{'tense.title' | translate}}</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{'tense.defination' | translate}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h2>{{'tense.example' | translate}}</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{'tense.ex' | translate}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h2>{{'tense.devided' | translate}}</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{'tense.parts' | translate}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-button expand="block" (click)="present()">Simple Present tense</ion-button>
+    <ion-button expand="block" color="dark" (click)="past()">Simple Past tense</ion-button>
+    <ion-button expand="block" color="primary" (click)="perfect()">Present perfect tense</ion-button>
+    <ion-button expand="block" color="success" (click)="future()">Simple future tense</ion-button>
+  </ion-card>
+</ion-content>

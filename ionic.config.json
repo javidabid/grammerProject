@@ -1,0 +1,8 @@
+{
+  "name": "grammer",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

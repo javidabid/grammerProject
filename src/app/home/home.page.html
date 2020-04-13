@@ -1,0 +1,252 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+	  <p>Grammar</p>
+	</ion-title>
+	<ion-buttons slot="end">
+		<ion-button (click)="openLanguagePopover($event)">
+		  <ion-icon name="more" slot="icon-only"></ion-icon>
+		</ion-button>
+	</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<super-tabs>
+		<super-tabs-toolbar slot="top" color="light">
+			<super-tab-button>
+				<ion-icon name="paper" color="light"></ion-icon>
+				<ion-label>Beginner</ion-label>
+			</super-tab-button>
+			<super-tab-button>
+				<ion-icon name="apps"></ion-icon>
+				<ion-label>Basic</ion-label>
+			</super-tab-button>
+			<super-tab-button>
+				<ion-icon name="ribbon"></ion-icon>
+				<ion-label>Intermediate</ion-label>
+			</super-tab-button>
+		</super-tabs-toolbar>
+
+
+	<super-tabs-container>
+		<super-tab>
+			<ion-content>
+				<ion-card (click)="gotoComma()" class="comma" shadow color="white">
+					<ion-card-header>
+						<ion-card-title style="margin-top: 10px; color: rgb(128, 127, 127);">Grammar of the Day</ion-card-title>
+					</ion-card-header>
+					<ion-card-content>
+						<span class="icon-comma">
+							<!--Icon goes here-->
+							<ion-img src="./assets/myIcons/comma.png" style="width: 50%; height: 100px; margin: auto;"></ion-img>
+						</span>
+						<h1 style="margin-top: 50px; font-weight: bolder;">{{'comma.usage' |translate }}</h1>
+						<ion-button (click)="gotoComma()" color="primary" shape="round" style="margin-top: 100px;" shadow>Learn More</ion-button>
+					</ion-card-content>
+				</ion-card>
+				<ion-item>
+					<ion-card (click)="gotoIntonation()" class="comma2" color="light" shadow>
+						<ion-card-header>
+							<ion-card-title ><ion-img src="./assets/myIcons/Pronouns.png" style="width: 50%; height: 50px; margin-left: 10px;"></ion-img></ion-card-title>
+						</ion-card-header>
+						<ion-card-content>
+						<h2 style="margin-top: 100px; font-weight: bolder;">{{'intonation.title' | translate }}</h2>
+						</ion-card-content>
+					</ion-card>
+
+				<ion-card (click)="gotoIntonation()" class="comma2" color="light" shadow>
+					<ion-card-header>
+
+						<ion-card-title ><ion-img src="./assets/myIcons/idioms.png" style="width: 50%; height: 50px; margin-left: 10px;"></ion-img></ion-card-title>
+					</ion-card-header>
+					<ion-card-content>
+					<h2 style="margin-top: 100px; font-weight: bolder;">{{'phonetics.title' | translate }}</h2>
+					</ion-card-content>
+				</ion-card>
+			</ion-item>
+		  </ion-content>
+		</super-tab>
+		<super-tab>
+			<ion-content >
+				<ion-card (click)="gotoTobe()" shadow style="background: #266585;">
+					<ion-card-header>
+						<ion-card-title style="color: white; ">
+							<h2>{{'verbs.title' | translate}}</h2>
+							<p color="light" style="font-size: 12px; margin-top: 5px;">
+								{{'verbs.verbsDevided' | translate}}
+							</p>
+						</ion-card-title>
+					</ion-card-header>
+					<ion-card-content style="color: white;">
+						<ion-buttons  slot="icon-only" >
+							<ion-button (click)="gotoTobe()" slot="end">
+								<ion-icon (click)="gotoTobe()" size="large" name="ios-arrow-dropright-circle"></ion-icon>
+							</ion-button>
+						</ion-buttons>
+					</ion-card-content>
+				</ion-card>
+
+				<ion-card (click)="gotoGerund()" shadow style="background: #f9e021;">
+					<ion-card-header>
+						<ion-card-title style="color: black; ">
+							<h2>{{'gerund.title' | translate}}</h2>
+							<p color="light" style="font-size: 12px; margin-top: 5px;">{{'gerund.defination' | translate }}</p>
+						</ion-card-title>
+					</ion-card-header>
+					<ion-card-content style="color: black;">
+						<ion-buttons  slot="icon-only" >
+							<ion-button (click)="gotoGerund()" slot="end">
+								<ion-icon href="tobe" size="large" name="ios-arrow-dropright-circle"></ion-icon>
+							</ion-button>
+						</ion-buttons>
+					</ion-card-content>
+				</ion-card>
+
+				<ion-card (click)="gotoRegular()" shadow style="background: #c7b3a7;">
+					<ion-card-header>
+						<ion-card-title style="color: black; ">
+							<h2>{{'RegularandIrregularverbs.title' | translate}}</h2>
+							<p color="light" style="font-size: 12px; margin-top: 5px;">{{'RegularandIrregularverbs.defination' | translate }}</p>
+						</ion-card-title>
+					</ion-card-header>
+					<ion-card-content style="color: black;">
+						<ion-buttons  slot="icon-only" >
+							<ion-button (click)="gotoRegular()" slot="end">
+								<ion-icon (click)="gotoRegular()" size="large" name="ios-arrow-dropright-circle"></ion-icon>
+							</ion-button>
+						</ion-buttons>
+					</ion-card-content>
+				</ion-card>
+
+				<ion-card (click)="gotoTagquestion()" shadow style="background: #72035d;">
+					<ion-card-header>
+						<ion-card-title style="color: white;">
+							<h2>{{'TagQuestion.title' | translate}}</h2>
+							<p color="light" style="font-size: 12px; margin-top: 5px;">{{'TagQuestion.defination' | translate }}</p>
+						</ion-card-title>
+					</ion-card-header>
+					<ion-card-content style="color: white;">
+						<ion-buttons  slot="icon-only" >
+							<ion-button  (click)="gotoTagquestion()" slot="end">
+								<ion-icon (click)="gotoTagquestion()" size="large" name="ios-arrow-dropright-circle"></ion-icon>
+							</ion-button>
+						</ion-buttons>
+					</ion-card-content>
+				</ion-card>
+
+				<ion-card (click)="gotoConditional()" shadow style="background: #bb456b;">
+					<ion-card-header>
+						<ion-card-title style="color: white; ">
+							<h2>{{'conditional.title' | translate}}</h2>
+							<p color="light" style="font-size: 12px; margin-top: 5px;">{{'conditional.defination' | translate }}</p>
+						</ion-card-title>
+					</ion-card-header>
+					<ion-card-content style="color: white;">
+						<ion-buttons  slot="icon-only" >
+							<ion-button (click)="gotoConditional()" slot="end">
+								<ion-icon (click)="gotoConditional()" size="large" name="ios-arrow-dropright-circle"></ion-icon>
+							</ion-button>
+						</ion-buttons>
+					</ion-card-content>
+				</ion-card>
+
+				<ion-card (click)="gotoAdjective()" shadow style="background: #ffffe8;">
+					<ion-card-header>
+						<ion-card-title style="color: black; ">
+							<h2>{{'adjective.title' | translate}}</h2>
+							<p color="light" style="font-size: 12px; margin-top: 5px;">{{'adjective.defination' | translate }}</p>
+						</ion-card-title>
+					</ion-card-header>
+					<ion-card-content style="color: black;">
+						<ion-buttons  slot="icon-only" >
+							<ion-button  (click)="gotoAdjective()" slot="end">
+								<ion-icon (click)="gotoAdjective()" size="large" name="ios-arrow-dropright-circle"></ion-icon>
+							</ion-button>
+						</ion-buttons>
+					</ion-card-content>
+				</ion-card>
+			</ion-content>
+		</super-tab>
+		<super-tab>
+				<ion-content>
+					<ion-card (click)="gotoTense()"  shadow shape="round" class="Fcard" style="text-align: 		center; border-radius: 20px">
+					  <ion-card-content>
+						<h1 style="text-align:center; font-weight:bolder;margin-top: 40px;">{{'tense.title' | translate}}</h1>
+						  <ion-button (click)="gotoTense()" color="light" style="margin-top: 50px; border-radius: 100px"shape="round"><p style="color: #3c3f69;">Learn More</p></ion-button>
+					  </ion-card-content>
+				  </ion-card>
+			  
+				  <ion-item>
+					  <ion-card (click)="gotoPro()" class="Scard" shadow color="light" style="width: 50%; height: 130px">
+						  <ion-card-header>
+							  <ion-card-title>
+								  
+							  </ion-card-title>
+						  </ion-card-header>
+						  <ion-card-content>
+							  <h2 style="font-weight: bolder; text-align: center; display:inline ;">{{'pronouns.title' | translate}}</h2>
+						  </ion-card-content>
+					  </ion-card>
+					  <!---->
+					  <ion-card shadow (click)="gotoSentence()" style="background: #c879c7 ; color: white;width: 50%; height: 130px;text-align: center;">
+						<ion-card-header>
+							<ion-card-title>
+	
+							</ion-card-title>
+						</ion-card-header>
+						  <ion-card-content>
+							  <h2>{{'Sentence.title' | translate}}</h2>
+						  </ion-card-content>
+					  </ion-card>
+				  </ion-item>
+			  
+				  <ion-item>
+					  <ion-card (click)="gotoPart()" shadow style="background: #e3c577 ;  color: white;width: 50%; height: 130px;text-align: center;">
+						  <ion-card-header>
+							  <ion-card-title>
+								  
+							  </ion-card-title>
+						  </ion-card-header>
+						  <ion-card-content>
+							  <h2 style="font-weight: bolder; text-align: center;">{{'partsOfSpeech.title' | translate}}</h2>
+						  </ion-card-content>
+					  </ion-card>
+					  <!---->
+					  <ion-card (click)="gotoGender()" shadow  style="width: 50%; height: 130px;background-color: #adaaff;  color: white;">
+						  <ion-card-header>
+							  <ion-card-title></ion-card-title>
+						  </ion-card-header>
+						  <ion-card-content>
+							  <h2 style="font-weight: bolder; text-align: center;">{{'gender.title' | translate}}</h2>
+						  </ion-card-content>
+					  </ion-card>
+				  </ion-item>
+			  
+				  <ion-item>
+					  <ion-card shadow style="width: 50%; height: 130px;background: #2bb1b8; color: white" (click)="gotoNoun()">
+						  <ion-card-header>
+							  <ion-card-title>
+								  
+							  </ion-card-title>
+						  </ion-card-header>
+						  <ion-card-content>
+							  <h2 (click)="gotoNoun()" style="font-weight: bolder; text-align: center;">{{'nouns.title' | translate }} </h2>
+						  </ion-card-content>
+					  </ion-card>
+					  <!---->
+					  <ion-card shadow (click)="gotoInfinitive()" style="width: 50%; height: 130px;background: #4e325b;  color: white">
+						  <ion-card-header>
+							  <ion-card-title>
+			  
+							  </ion-card-title>
+						  </ion-card-header>
+						  <ion-card-content>
+							  <h2 style="font-weight: bolder; text-align: center; margin: auto;">{{'infinitive.title' | translate }}</h2>
+						  </ion-card-content>
+					  </ion-card>
+				  </ion-item>
+			</ion-content>
+		</super-tab>
+	</super-tabs-container>
+</super-tabs>
+
